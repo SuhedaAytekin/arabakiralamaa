@@ -28,7 +28,7 @@ public class RegistrationController {
 
     public String home() {
 
-        return "Registration";
+        return "redirect:/registration";
 
     }
 
