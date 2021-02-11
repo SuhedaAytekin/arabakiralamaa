@@ -24,6 +24,14 @@ public class RegistrationController {
 
     private CustomerService customerService;
 
+    @GetMapping({"/"})
+
+    public String home() {
+
+        return "registration";
+
+    }
+
     @GetMapping("/registration")
     public String reg(Map<String, Object> model) {
         model.put("car", new CarDTO());
@@ -43,10 +51,16 @@ public class RegistrationController {
         return "carList";
     }
 
-    @PostMapping("/delete")
+//    @PostMapping("/delete")
+//    public String deleteCar(@RequestParam("id") String id) {
+//        carService.deleteCar(Long.parseLong(id));
+//        return "redirect:/list";
+//    }
+
+    @GetMapping("/delete")
     public String deleteCar(@RequestParam("id") String id) {
         carService.deleteCar(Long.parseLong(id));
-        return "redirect:/list";
+       return "redirect:/list";
     }
 
     @GetMapping("/edit")

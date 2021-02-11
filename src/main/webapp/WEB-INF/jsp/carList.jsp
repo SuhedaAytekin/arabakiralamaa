@@ -51,9 +51,10 @@
                 <a href="/edit?id=${emp.id}" >Edit</a>
             </td>
             <td>
-                <form action="/delete?id=${emp.id}" method="post">
-                    <input type="submit" value="Delete" style="background:none;border:0px;cursor: pointer;"/>
-                </form>
+                <a href="/delete?id=${emp.id}" >Delete</a>
+<%--                <form action="/delete?id=${emp.id}" method="post">--%>
+<%--                    <input type="submit" value="Delete" style="background:none;border:0px;cursor: pointer;"/>--%>
+<%--                </form>--%>
             </td>
 
 
