@@ -28,7 +28,7 @@ public class RegistrationController {
 
     public String home() {
 
-        return "registration";
+        return "Registration";
 
     }
 
