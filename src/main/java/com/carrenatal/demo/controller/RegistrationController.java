@@ -25,10 +25,9 @@ public class RegistrationController {
     private CustomerService customerService;
 
     @GetMapping({"/"})
-
-    public String home() {
-
-        return "redirect:/registration";
+    public String home(Map<String, Object> model) {
+        model.put("car", new CarDTO());
+        return "Registration";
 
     }
 
